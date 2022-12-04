@@ -1,0 +1,17 @@
+[
+    {
+      
+      "picture": "https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Espresso"
+    },
+    {
+      
+      "picture": "https://images.pexels.com/photos/4457151/pexels-photo-4457151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Frozen Drinks"
+    },
+    {
+      
+      "picture": "https://images.pexels.com/photos/298217/pexels-photo-298217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Pastries"
+    }
+  ]

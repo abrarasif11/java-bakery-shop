@@ -6,6 +6,8 @@ import Review from './Pages/Reviews/Review';
 import MyReview from './Pages/Reviews/MyReview';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import Login from './Pages/Login/Login';
+import SignUp from './Pages/Login/SignUp';
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +30,14 @@ function App() {
         {
           path: '/aboutUs',
           element : <AboutUs></AboutUs>
+        },
+        {
+          path: '/login',
+          element : <Login></Login>
+        },
+        {
+          path: '/signup',
+          element : <SignUp></SignUp>
         },
       ]
     },
