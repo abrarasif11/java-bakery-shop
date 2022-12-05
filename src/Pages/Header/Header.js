@@ -75,6 +75,13 @@ const Header = () => {
                                       Log in
                                   </Link>
                           } */}
+                            <Link
+                                      to="/login"
+
+                                      className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                  >
+                                      Log in
+                                  </Link>
                         </li>
                     </ul>
                     <div class="lg:hidden">

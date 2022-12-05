@@ -1,37 +1,38 @@
 import React from 'react';
 
 const Banner2 = () => {
-    return (
-        <div className="mt-20 relative flex items-center justify-center w-full dark:text-gray-50">
-	<button aria-label="Slide back" type="button" className="absolute left-0 z-30 p-2 ml-10 focus:outline-none focus:dark:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
-		<svg width="8" height="14" fill="none" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4">
-			<path d="M7 1L1 7L7 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-		</svg>
-	</button>
-	<div className="flex items-center justify-start w-full h-full gap-6 py-4 mx-auto overflow-auto lg:gap-8">
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1" />
+	return (
+		<div className="carousel mt-20 rounded-xl mx-auto w-3/4">
+		<div id="slide1" className="carousel-item relative w-full">
+		  <img src="https://images.unsplash.com/photo-1513267048331-5611cad62e41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="w-full" alt='' />
+		  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+			<a href="#slide4" className="btn btn-circle">❮</a> 
+			<a href="#slide2" className="btn btn-circle">❯</a>
+		  </div>
+		</div> 
+		<div id="slide2" className="carousel-item relative w-full">
+		  <img src="https://images.unsplash.com/photo-1597528662465-55ece5734101?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="w-full" alt='' />
+		  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+			<a href="#slide1" className="btn btn-circle">❮</a> 
+			<a href="#slide3" className="btn btn-circle">❯</a>
+		  </div>
+		</div> 
+		<div id="slide3" className="carousel-item relative w-full">
+		  <img src="https://images.unsplash.com/photo-1518481335010-06c24f4626de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="w-full" alt=''/>
+		  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+			<a href="#slide2" className="btn btn-circle">❮</a> 
+			<a href="#slide4" className="btn btn-circle">❯</a>
+		  </div>
+		</div> 
+		<div id="slide4" className="carousel-item relative w-full">
+		  <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="w-full" alt='' />
+		  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+			<a href="#slide3" className="btn btn-circle">❮</a> 
+			<a href="#slide1" className="btn btn-circle">❯</a>
+		  </div>
 		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src="https://images.pexels.com/photos/1724194/pexels-photo-1724194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2" />
-		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src="https://images.pexels.com/photos/827516/pexels-photo-827516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3" />
-		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4" />
-		</div>
-		<div className="relative flex flex-shrink-0 w-full sm:w-auto">
-			<img className="object-cover object-center h-96 aspect-square dark:bg-gray-500" src="https://images.pexels.com/photos/1441122/pexels-photo-1441122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 5" />
-		</div>
-	</div>
-	<button aria-label="Slide forward" id="next" className="absolute right-0 z-30 p-2 mr-10 focus:outline-none focus:dark:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
-		<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4">
-			<path d="M1 1L7 7L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-		</svg>
-	</button>
-</div>
-    );
+	  </div>
+	);
 };
 
 export default Banner2;
