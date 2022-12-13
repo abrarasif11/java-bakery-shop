@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import headerPhoto from '../../assests/clipart2362429.png'
-
+import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(err => console.log(err));
+    }
     return (
-        <div class="bg-red-700 font-poppins">
+        <div class="bg-red-700 font-titillium">
             <div class="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div class="relative flex items-center justify-between lg:justify-center lg:space-x-16">
                     <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -45,43 +50,36 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            {/* {
-                              user?.uid ?
-                                  <div className='flex justify-center items-center'>
-                                      <Link
-                                          to="/dashboard"
-                                          className="font-medium tracking-wide text-orange-600 transition-colors duration-200 hover:text-teal-accent-400"
-                                      >
-                                          Dashboard
+                            {
+                                user?.uid ?
+                                    <div className='flex justify-center items-center'>
+                                        <Link
+                                            to="/dashboard"
+                                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                        >
+                                            Dashboard
 
-                                      </Link>
-                                      
-                                      <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 sm:h2 rounded-full" alt="" /></span>
-                                      
-                                      <button
-                                          onClick={handleLogout}
-                                          className="font-medium tracking-wide ml-6 bg-orange-600 px-2  rounded py-2  text-black transition-colors duration-200 hover:text-teal-accent-400"
-                                      >
-                                          Log Out
-                                      </button>
-                                      
-                                  </div>
-                                  :
-                                  <Link
-                                      to="/login"
+                                        </Link>
 
-                                      className="font-medium tracking-wide text-orange-600 transition-colors duration-200 hover:text-teal-accent-400"
-                                  >
-                                      Log in
-                                  </Link>
-                          } */}
-                            <Link
-                                      to="/login"
+                                        <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 sm:h2 rounded-full" alt="" /></span>
 
-                                      className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
-                                  >
-                                      Log in
-                                  </Link>
+                                        <button
+                                            onClick={handleLogout}
+                                            className="font-medium tracking-wide ml-10 bg-white hover:bg-black hover:text-white px-2  rounded py-2  text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                        >
+                                            Log Out
+                                        </button>
+
+                                    </div>
+                                    :
+                                    <Link
+                                        to="/login"
+
+                                        className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                    >
+                                        Log in
+                                    </Link>
+                            }
                         </li>
                     </ul>
                     <div class="lg:hidden">
@@ -161,33 +159,36 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                {/* {
-                                                  user?.uid ?
-                                                      <>
-                                                          <Link
-                                                              to="/dashboard"
-                                                              className="font-medium tracking-wide text-orange-600 transition-colors duration-200 hover:text-teal-accent-400"
-                                                          >
-                                                              Dashboard
-                                                          </Link>
-                                                          <button
-                                                              onClick={handleLogout}
-                                                              className="font-medium tracking-wide bg-orange-600 px-2  rounded py-2  text-black transition-colors duration-200 hover:text-teal-accent-400"
-                                                          >
-                                                              Log Out
-                                                          </button>
-                                                      </>
-                                                      :
-                                                      <Link
-                                                          to="/login"
+                                                {
+                                                    user?.uid ?
+                                                        <div className='flex justify-center items-center'>
+                                                            <Link
+                                                                to="/dashboard"
+                                                                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                                            >
+                                                                Dashboard
 
-                                                          className="font-medium tracking-wide text-orange-600 transition-colors duration-200 hover:text-teal-accent-400"
-                                                      >
-                                                          Log in
-                                                      </Link>
-                                              } */}
+                                                            </Link>
+
+                                                            <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 sm:h2 rounded-full" alt="" /></span>
+                                                            <button
+                                                                onClick={handleLogout}
+                                                                className="font-medium tracking-wide ml-10 bg-white hover:bg-black hover:text-white px-2  rounded py-2  text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                                            >
+                                                                Log Out
+                                                            </button>
+
+                                                        </div>
+                                                        :
+                                                        <Link
+                                                            to="/login"
+
+                                                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                                        >
+                                                            Log in
+                                                        </Link>
+                                                }
                                             </li>
-
                                         </ul>
                                     </nav>
                                 </div>

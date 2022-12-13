@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+    },
+    fontFamily:{
+      titillium  : ["Titillium ", "sans-serif"]
+    }
   },
   plugins: [require("daisyui")],
 }

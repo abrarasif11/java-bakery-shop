@@ -3,7 +3,7 @@ import React from 'react';
 const Categories = ({ category }) => {
      const{name, picture} = category
     return (
-        <div class="flex flex-col items-center justify-center w-full max-w-sm mx-auto">
+        <div class="flex font-titillium flex-col items-center justify-center w-full max-w-sm mx-auto">
             <div class="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md">
                 <img src={picture} alt="" />
             </div>

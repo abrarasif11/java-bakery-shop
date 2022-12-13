@@ -8,6 +8,7 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const router = createBrowserRouter([
@@ -49,6 +50,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      <Toaster></Toaster>
     </div>
   );
 }
