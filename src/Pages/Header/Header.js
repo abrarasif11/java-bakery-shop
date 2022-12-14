@@ -11,7 +11,7 @@ const Header = () => {
             .catch(err => console.log(err));
     }
     return (
-        <div class="bg-red-700 font-titillium">
+        <div class="bg-red-700 font-josefin">
             <div class="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div class="relative flex items-center justify-between lg:justify-center lg:space-x-16">
                     <ul class="flex items-center hidden space-x-8 lg:flex">

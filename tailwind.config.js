@@ -7,7 +7,7 @@ module.exports = {
     extend: {
     },
     fontFamily:{
-      titillium  : ["Titillium ", "sans-serif"]
+      josefin  : ["Josefin ", "sans-serif"]
     }
   },
   plugins: [require("daisyui")],

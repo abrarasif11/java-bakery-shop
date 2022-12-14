@@ -9,6 +9,7 @@ import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
 import { Toaster } from 'react-hot-toast';
+import Spinner from './Shared/Spinner/Spinner';
 
 function App() {
   const router = createBrowserRouter([
@@ -49,7 +50,7 @@ function App() {
   ])
   return (
     <div className="App">
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider fallbackElement={<Spinner></Spinner>} router={router}></RouterProvider>
       <Toaster></Toaster>
     </div>
   );
