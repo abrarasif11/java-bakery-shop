@@ -1,9 +1,13 @@
 import React from 'react';
 
 const Spinner = () => {
-        return (
-            <div className="w-16 h-16 mt-72 border-4 mx-auto border-dashed rounded-full animate-spin border-red-700"></div>
-        );
+    return (
+        <div className="flex items-center justify-center space-x-2">
+            <div className="w-4 h-4 rounded-full animate-pulse bg-red-700"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse bg-red-700"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse bg-red-700"></div>
+        </div>
+    );
 };
 
 export default Spinner;

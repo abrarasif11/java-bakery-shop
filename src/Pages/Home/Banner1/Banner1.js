@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner1 = () => {
     return (
@@ -20,10 +21,10 @@ const Banner1 = () => {
               <p className="max-w-xl mb-4 text-base text-white md:text-xl">
               You work hard you need something make you more efficient. Try out our coffees check the menu and get yourself boosted up again ❤
               </p>
-              <a
-                href="/"
+              <Link
+                to="/aboutUs"
                 aria-label=""
-                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 bg-red-700 px-2 py-2 text-teal-accent-400 hover:text-teal-accent-700"
+                className="inline-flex items-center font-josefin font-semibold tracking-wider transition-colors duration-200 bg-red-700 px-2 py-2 text-teal-accent-400 hover:text-teal-accent-700"
               >
                 Learn more
                 <svg
@@ -33,7 +34,7 @@ const Banner1 = () => {
                 >
                   <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
                 </svg>
-              </a>
+              </Link>
             </div>
            
           </div>
