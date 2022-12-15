@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
 import { Toaster } from 'react-hot-toast';
 import Spinner from './Shared/Spinner/Spinner';
+import AllItem from './Pages/AllItem/AllItem';
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,10 @@ function App() {
         {
           path: '/',
           element : <Home></Home>
+        },
+        {
+          path: '/allItems',
+          element : <AllItem></AllItem>
         },
         {
           path: '/reviews',
