@@ -11,6 +11,7 @@ import SignUp from './Pages/Login/SignUp';
 import { Toaster } from 'react-hot-toast';
 import Spinner from './Shared/Spinner/Spinner';
 import AllItem from './Pages/AllItem/AllItem';
+import SingleCategoryItem from './Pages/SingleCategoryItem/SingleCategoryItem';
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,12 @@ function App() {
         {
           path: '/allItems',
           element : <AllItem></AllItem>
+        },
+        {
+          path: '/categories/:id',
+          loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.id}`),
+        element: <SingleCategoryItem></SingleCategoryItem>
         },
         {
           path: '/reviews',
