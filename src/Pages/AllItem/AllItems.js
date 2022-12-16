@@ -3,7 +3,7 @@ import React from 'react';
 const AllItems = ({ allitem }) => {
     const { picture, name, price } = allitem
     return (
-        <div className="max-w-xs rounded-md shadow-md font-josefin bg-slate-200 dark:text-gray-100">
+        <div className=" rounded-md shadow-md font-josefin bg-slate-200 dark:text-gray-100">
             <img src={picture} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">

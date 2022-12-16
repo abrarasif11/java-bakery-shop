@@ -10,7 +10,7 @@ const Category = () => {
             .then(data => setCategories(data))
     }, [])
     return (
-      <div className='grid sm:grid-cols-3 gap-3 ml-10 sm:ml-3  mt-20'>
+      <div className='grid mx-10 sm:grid-cols-3 gap-3 ml-10 sm:ml-3  mt-20'>
         {
             categories.map(category => <Categories
             key={category._id}

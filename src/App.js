@@ -12,6 +12,7 @@ import { Toaster } from 'react-hot-toast';
 import Spinner from './Shared/Spinner/Spinner';
 import AllItem from './Pages/AllItem/AllItem';
 import SingleCategoryItem from './Pages/SingleCategoryItem/SingleCategoryItem';
+import PrivateRoute from './Route/PrivateRoute/PrivateRoute';
 
 function App() {
   const router = createBrowserRouter([
@@ -21,43 +22,43 @@ function App() {
       children: [
         {
           path: '/',
-          element : <Home></Home>
+          element: <Home></Home>
         },
         {
           path: '/allItems',
-          element : <AllItem></AllItem>
+          element: <PrivateRoute><AllItem></AllItem></PrivateRoute>
         },
         {
           path: '/categories/:id',
           loader: ({ params }) =>
-          fetch(`http://localhost:5000/categories/${params.id}`),
-        element: <SingleCategoryItem></SingleCategoryItem>
+            fetch(`http://localhost:5000/categories/${params.id}`),
+          element: <PrivateRoute><SingleCategoryItem></SingleCategoryItem></PrivateRoute>
         },
         {
           path: '/reviews',
-          element : <Review></Review>
+          element: <Review></Review>
         },
         {
           path: '/myReviews',
-          element : <MyReview></MyReview>
+          element: <MyReview></MyReview>
         },
         {
           path: '/aboutUs',
-          element : <AboutUs></AboutUs>
+          element: <AboutUs></AboutUs>
         },
         {
           path: '/login',
-          element : <Login></Login>
+          element: <Login></Login>
         },
         {
           path: '/signup',
-          element : <SignUp></SignUp>
+          element: <SignUp></SignUp>
         },
       ]
     },
     {
       path: '*',
-      element:<ErrorPage></ErrorPage>
+      element: <ErrorPage></ErrorPage>
     }
   ])
   return (
