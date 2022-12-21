@@ -10,9 +10,7 @@ const SignUp = () => {
         const email = form.email.value;
         const username = form.username.value;
         const password = form.password.value;
-
         console.log({ email, password, username });
-
         createUser(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -32,17 +30,17 @@ const SignUp = () => {
             <form onSubmit={handleSignUp} class="mt-6">
                 <div className='mb-2'>
                     <label htmlFor="username" class="flex items-center justify-between text-sm text-black dark:text-gray-200">Username</label>
-                    <input name='username' type="text" class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required/>
+                    <input name='username' type="text" class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required />
                 </div>
                 <div>
                     <label htmlFor="email" class="flex items-center justify-between text-sm text-black dark:text-gray-200">Email</label>
-                    <input name='email' type="email" class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required/>
+                    <input name='email' type="email" class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required />
                 </div>
 
                 <div class="mt-4">
                     <div class="flex items-center justify-between">
                         <label htmlFor="password" class="block text-sm text-black dark:text-gray-200" required >Password</label>
-                       
+
                     </div>
 
                     <input name='password' type="password" class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />

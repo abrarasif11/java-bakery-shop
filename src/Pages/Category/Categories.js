@@ -18,8 +18,6 @@ const Categories = ({ category }) => {
                 <h3 class="py-2 font-bold tracking-wide text-center text-white uppercase dark:text-white">{name}</h3>
                 <div class="flex items-center justify-between px-3 py-2 bg-black">
                     <button onClick={() => handleOneCategory(`${category.category_id}`)} class="px-2 py-1 text-xs font-semibold text-white transition-colors duration-300 transform bg-red-700 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Order Now</button> 
-                   
-                     {/* <button  type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-orange-600 dark:text-gray-900">See All Products</button> */}
                 </div>
             </div>
         </div>

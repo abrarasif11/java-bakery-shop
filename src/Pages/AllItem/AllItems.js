@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AllItems = ({ allitem }) => {
+const AllItems = ({ allitem, setCategories }) => {
     const { picture, name, price } = allitem
     return (
         <div className=" rounded-md shadow-md font-josefin bg-slate-200 dark:text-gray-100">
@@ -10,7 +10,11 @@ const AllItems = ({ allitem }) => {
                     <h2 className="text-2xl font-semibold tracking-wide">{name}</h2>
                     <h2 className="text-xl font-semibold tracking-wide">Price : {price}</h2>
                 </div>
-                <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-red-700 hover:bg-red-800 text-white">Order Now</button>
+                <label 
+                 htmlFor="order-modal" type="button"
+                 className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-red-700 text-black"
+                 onClick={() => setCategories(allitem)}
+                 >Order Now</label>
             </div>
         </div>
     );
