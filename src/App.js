@@ -13,6 +13,11 @@ import Spinner from './Shared/Spinner/Spinner';
 import AllItem from './Pages/AllItem/AllItem';
 import SingleCategoryItem from './Pages/SingleCategoryItem/SingleCategoryItem';
 import PrivateRoute from './Route/PrivateRoute/PrivateRoute';
+import Order from './Pages/Orders/Order';
+import DashboardLayout from './Pages/Dashboard/DashboardLayout';
+import MyOrder from './Pages/Dashboard/MyOrders/MyOrder';
+import AllUsers from './Pages/Dashboard/AllUsers/AllUsers';
+import AddItems from './Pages/Dashboard/AddItems/AddItems';
 
 function App() {
   const router = createBrowserRouter([
@@ -39,6 +44,10 @@ function App() {
           element: <Review></Review>
         },
         {
+          path: '/orders',
+          element: <Order></Order>
+        },
+        {
           path: '/myReviews',
           element: <MyReview></MyReview>
         },
@@ -59,6 +68,24 @@ function App() {
     {
       path: '*',
       element: <ErrorPage></ErrorPage>
+    },
+    {
+      path: '/dashboard',
+      element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+      children: [
+        {
+          path: '/dashboard',
+          element: <MyOrder></MyOrder>
+        },
+        {
+          path: '/dashboard/allUsers',
+          element: <AllUsers></AllUsers>
+        },
+        {
+          path: '/dashboard/addItems',
+          element: <AddItems></AddItems>
+        },
+      ]
     }
   ])
   return (

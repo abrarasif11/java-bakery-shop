@@ -18,15 +18,23 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/"
-                                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                             >
                                 Home
                             </Link>
                         </li>
                         <li>
                             <Link
+                                to="/orders"
+                                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
+                            >
+                                Orders
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
                                 to="/reviews"
-                                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                             >
                                 Reviews
                             </Link>
@@ -44,7 +52,7 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/aboutUs"
-                                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                             >
                                 About Us
                             </Link>
@@ -54,8 +62,15 @@ const Header = () => {
                                 user?.uid ?
                                     <div className='flex justify-center items-center'>
                                         <Link
+                                            to="/myReviews"
+                                            className="font-medium mr-6 tracking-wide text-black transition-colors duration-200 hover:text-white"
+                                        >
+                                            My Reviews
+
+                                        </Link>
+                                        <Link
                                             to="/dashboard"
-                                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                         >
                                             Dashboard
 
@@ -65,7 +80,7 @@ const Header = () => {
 
                                         <button
                                             onClick={handleLogout}
-                                            className="font-medium tracking-wide ml-10 bg-white hover:bg-black hover:text-white px-2  rounded py-2  text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                            className="font-medium tracking-wide ml-10 bg-white hover:bg-black hover:text-white px-2  rounded py-2  text-black transition-colors duration-200 hover:text-white"
                                         >
                                             Log Out
                                         </button>
@@ -75,7 +90,7 @@ const Header = () => {
                                     <Link
                                         to="/login"
 
-                                        className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                        className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                     >
                                         Log in
                                     </Link>
@@ -137,7 +152,7 @@ const Header = () => {
                                             <li>
                                                 <Link
                                                     to="/"
-                                                    class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                                 >
                                                     Home
                                                 </Link>
@@ -145,15 +160,23 @@ const Header = () => {
                                             <li>
                                                 <Link
                                                     to="/reviews"
-                                                    class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                                 >
                                                     Reviews
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link
+                                                    to="/orders"
+                                                    class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
+                                                >
+                                                    Orders
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
                                                     to="/aboutUs"
-                                                    class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                                 >
                                                     About Us
                                                 </Link>
@@ -163,8 +186,15 @@ const Header = () => {
                                                     user?.uid ?
                                                         <div className='flex justify-center items-center'>
                                                             <Link
+                                                                to="/myReviews"
+                                                                className="font-medium mr-6 tracking-wide text-black transition-colors duration-200 hover:text-white"
+                                                            >
+                                                                My Reviews
+
+                                                            </Link>
+                                                            <Link
                                                                 to="/dashboard"
-                                                                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                                                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                                             >
                                                                 Dashboard
 
@@ -183,7 +213,7 @@ const Header = () => {
                                                         <Link
                                                             to="/login"
 
-                                                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400"
+                                                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                                         >
                                                             Log in
                                                         </Link>
