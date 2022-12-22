@@ -18,6 +18,7 @@ import DashboardLayout from './Pages/Dashboard/DashboardLayout';
 import MyOrder from './Pages/Dashboard/MyOrders/MyOrder';
 import AllUsers from './Pages/Dashboard/AllUsers/AllUsers';
 import AddItems from './Pages/Dashboard/AddItems/AddItems';
+import AdminRoute from './Route/PrivateRoute/AdminRoute/AdminRoute';
 
 function App() {
   const router = createBrowserRouter([
@@ -81,10 +82,10 @@ function App() {
           path: '/dashboard/allUsers',
           element: <AllUsers></AllUsers>
         },
-        {
-          path: '/dashboard/addItems',
-          element: <AddItems></AddItems>
-        },
+        // {
+        //   path: '/dashboard/addItems',
+        //   element: <AddItems></AddItems>
+        // },
       ]
     }
   ])
