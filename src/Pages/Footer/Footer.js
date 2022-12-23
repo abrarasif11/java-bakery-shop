@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import footerImg from '../../assests/clipart2362429.png'
 
 const Footer = () => {
-    return (
-        <div className="relative font-josefin mt-16 bg-red-700">
+  return (
+    <div className="relative font-josefin mt-16 bg-red-700">
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
@@ -12,7 +12,7 @@ const Footer = () => {
               to="/"
               className="inline-flex items-center"
             >
-             <img className='w-[50px]' src={footerImg} alt="" />
+              <img className='w-[50px]' src={footerImg} alt="" />
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                 Java Bakery Shop
               </span>
@@ -29,7 +29,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                   Espresso
+                    Espresso
                   </a>
                 </li>
                 <li>
@@ -60,7 +60,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                  Cafe Latte
+                    Cafe Latte
                   </a>
                 </li>
                 <li>
@@ -99,7 +99,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                   Oreo Shake
+                    Oreo Shake
 
                   </a>
                 </li>
@@ -108,7 +108,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                   Strawberry Milkshake
+                    Strawberry Milkshake
                   </a>
                 </li>
                 <li>
@@ -124,7 +124,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                   Chocolate Milkshake
+                    Chocolate Milkshake
                   </a>
                 </li>
                 <li>
@@ -132,7 +132,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                   Lemonade
+                    Lemonade
                   </a>
                 </li>
                 <li>
@@ -140,7 +140,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                   Kiwi Smoothies
+                    Kiwi Smoothies
                   </a>
                 </li>
               </ul>
@@ -179,7 +179,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                   Chocolate Brownies
+                    Chocolate Brownies
                   </a>
                 </li>
                 <li>
@@ -187,7 +187,7 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-white"
                   >
-                 Tiramisu Cake
+                    Tiramisu Cake
                   </a>
                 </li>
               </ul>
@@ -201,7 +201,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Footer;

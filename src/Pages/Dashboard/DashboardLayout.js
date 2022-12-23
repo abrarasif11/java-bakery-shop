@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 
 const DashboardLayout = () => {
     const { user } = useContext(AuthContext)
-    const [isAdmin] = useAdmin(user?.email)
+    // const [isAdmin] = useAdmin(user?.email)
     return (
         <div>
             <Header></Header>

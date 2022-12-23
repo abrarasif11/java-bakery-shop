@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Category from '../Category/Category';
 import Banner2 from './Banner/Banner2';
 import Banner3 from './Banner/Banner3';

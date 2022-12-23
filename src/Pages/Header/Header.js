@@ -23,14 +23,14 @@ const Header = () => {
                                 Home
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link
                                 to="/orders"
                                 class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                             >
                                 Orders
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link
                                 to="/reviews"
@@ -165,14 +165,14 @@ const Header = () => {
                                                     Reviews
                                                 </Link>
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <Link
                                                     to="/orders"
                                                     class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                                 >
                                                     Orders
                                                 </Link>
-                                            </li>
+                                            </li> */}
                                             <li>
                                                 <Link
                                                     to="/aboutUs"
