@@ -42,7 +42,7 @@ function App() {
         },
         {
           path: '/reviews',
-          element: <Review></Review>
+          element: <PrivateRoute><Review></Review></PrivateRoute>
         },
         // {
         //   path: '/orders',
@@ -50,7 +50,9 @@ function App() {
         // },
         {
           path: '/myReviews',
-          element: <MyReview></MyReview>
+          loader :() => fetch('http://localhost:5000/review'),
+          element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+        
         },
         {
           path: '/aboutUs',
