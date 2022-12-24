@@ -2,9 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import headerPhoto from '../../assests/clipart2362429.png'
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import useAdmin from '../../hooks/useAdmin';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { user, logOut } = useContext(AuthContext);
+    const [isAdmin] = useAdmin(user?.email)
     const handleLogout = () => {
         logOut()
             .then()
@@ -68,16 +70,18 @@ const Header = () => {
                                             My Reviews
 
                                         </Link>
-                                      
-                                        <Link
-                                            to="/dashboard"
-                                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
-                                        >
-                                            Dashboard
+                                        {
+                                            isAdmin && <>
+                                                <Link
+                                                    to="/dashboard"
+                                                    className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
+                                                >
+                                                    Dashboard
 
-                                        </Link>
-                                        
-                                        
+                                                </Link>
+                                            </>
+                                        }
+
                                         <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 sm:h2 rounded-full" alt="" /></span>
 
                                         <button
