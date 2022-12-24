@@ -16,12 +16,30 @@ const SignUp = () => {
                 const user = userCredential.user;
                 console.log(user);
                 toast.success("User Created Successfully")
-                // saveUser(username, email);
+                saveUser(username, email);
                 form.reset();
             })
             .catch((error) => {
                 console.error(error);
             });
+            const saveUser = (name, email, dropdown) => {
+                const usersSaved = { name, email, dropdown };
+                console.log(usersSaved);
+                fetch("http://localhost:5000/usersList", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(usersSaved),
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+        
+                    })
+                    .catch((err) => console.log(err));
+        
+            }
     };
     return (
         <div class="w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 bg-black rounded-lg shadow-md ">
@@ -45,7 +63,6 @@ const SignUp = () => {
 
                     <input name='password' type="password" class="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
-
                 <div class="mt-6">
                     <button class=" w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-700 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
                         Sign In

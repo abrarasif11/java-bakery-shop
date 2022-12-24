@@ -43,7 +43,7 @@ const AddItems = () => {
     };
     return (
         <div>
-            <h1 className="text-3xl mt-10 ml-4 font-semibold bg-black text-orange-600 w-fit px-2 py-2">Add Items</h1>
+            <h1 className="text-4xl mt-10 ml-4 font-semibold text-red-700 w-fit px-2 py-2">Add Items</h1>
             <form onSubmit={handleAddProducts} action="" className="mt-5 ">
                 <div className="my-3">
                     <input

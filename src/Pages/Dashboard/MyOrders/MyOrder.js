@@ -17,7 +17,7 @@ const MyOrder = () => {
     })
     return (
         <div className='font-josefin'>
-            <h1 className='text-3xl font-bold mt-10 mb-5 bg-black text-orange-600 w-fit px-2 py-2 ml-4 '>Order List</h1>
+            <h1 className='text-4xl font-bold mt-10 mb-5 text-red-700 w-fit px-2 py-2 ml-4 '>Order List</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -34,10 +34,10 @@ const MyOrder = () => {
                             items.map((item, i) =>
                                 <tr key={item._id}>
                                     <th>{i+1}</th>
-                                    <th className='text-sky-700'>{item.email}</th>
-                                    <td className='text-sky-700'>{item.price}</td>
-                                    <td className='text-sky-700'>{item.number}</td>
-                                    <td className='text-sky-700'>{item.meeting}</td>
+                                    <th className='text-red-700'>{item.email}</th>
+                                    <td className='text-red-700'>{item.price}</td>
+                                    <td className='text-red-700'>{item.number}</td>
+                                    <td className='text-red-700'>{item.meeting}</td>
                                 </tr>
 
                             )

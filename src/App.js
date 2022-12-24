@@ -17,6 +17,7 @@ import DashboardLayout from './Pages/Dashboard/DashboardLayout';
 import MyOrder from './Pages/Dashboard/MyOrders/MyOrder';
 import AllUsers from './Pages/Dashboard/AllUsers/AllUsers';
 import AddItems from './Pages/AddItems/AddItems';
+import AdminRoute from './Route/PrivateRoute/AdminRoute/AdminRoute';
 
 
 function App() {
@@ -75,15 +76,15 @@ function App() {
       children: [
         {
           path: '/dashboard',
-          element: <MyOrder></MyOrder>
+          element: <AdminRoute><MyOrder></MyOrder></AdminRoute>
         },
         {
           path: '/dashboard/allUsers',
-          element: <AllUsers></AllUsers>
+          element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
         },
         {
           path: '/dashboard/addItems',
-          element: <AddItems></AddItems>
+          element: <AdminRoute><AddItems></AddItems></AdminRoute>
         },
       ]
     }

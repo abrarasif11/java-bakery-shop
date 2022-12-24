@@ -47,7 +47,7 @@ const AllUsers = () => {
     }
     return (
         <div>
-            <h1 className='text-3xl font-josefin font-bold mb-5 mt-10 bg-black text-orange-600 w-fit px-2 py-2 ml-4'>User Info</h1>
+            <h1 className='text-4xl font-josefin font-bold mb-5 mt-10  text-red-700  w-fit px-2 py-2 ml-4'>User Info</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -64,10 +64,10 @@ const AllUsers = () => {
                             users.map((user, i) =>
                                 <tr key={user._id}>
                                     <th>{i+1}</th>
-                                    <td  className='text-green-700'>{user.name}</td>
-                                    <td  className='text-green-700'>{user.email}</td>
-                                    <td  className='text-green-700'>{ user?.role !== 'admin' &&  <button onClick={() => handleMakeAdmin(user._id)} className='rounded px-2 py-1 text-black bg-orange-600  btn-xs'>Make Admin</button>}</td>
-                                    <td>{user?.role !== 'admin' && <button onClick={() => handleDeleteUser(user._id)} className='bg-red-700 rounded text-white px-2'>Delete</button>}</td>
+                                    <td  className='text-black'>{user.name}</td>
+                                    <td  className='text-black'>{user.email}</td>
+                                    <td  className='text-black'>{ user?.role !== 'admin' &&  <button onClick={() => handleMakeAdmin(user._id)} className='rounded px-2 py-1 text-white bg-red-700  btn-xs'>Make Admin</button>}</td>
+                                    <td>{user?.role !== 'admin' && <button onClick={() => handleDeleteUser(user._id)} className='bg-black rounded text-white px-2'>Delete</button>}</td>
                                 </tr>
                             )
                         }
