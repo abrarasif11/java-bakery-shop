@@ -17,7 +17,7 @@ const AllItemsCategories = ({categories}) => {
             const formValue = { name, email, meeting, number,price };
             console.log(formValue);
             if (user?.uid) {
-                fetch("http://localhost:5000/items", {
+                fetch("https://java-bakery-shop-server.vercel.app/items", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

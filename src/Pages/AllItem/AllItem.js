@@ -6,7 +6,7 @@ const AllItem = () => {
     const [allitems, setAllItems] = useState([]);
     const [categories, setCategories] = useState(null)
     useEffect(() => {
-        fetch('http://localhost:5000/allcategories')
+        fetch('https://java-bakery-shop-server.vercel.app/allcategories')
             .then(res => res.json())
             .then(data => setAllItems(data))
     }, [])

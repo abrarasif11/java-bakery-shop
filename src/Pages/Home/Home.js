@@ -20,7 +20,7 @@ const Home = () => {
           <Link className='flex items-center justify-center
                        ' to='/allItems'>
                     <button
-                        className="py-4 px-6 mt-20 m-8 font-poppins text-xl text-white  font-medium rounded-lg bg-gradient-to-rounded-md bg-red-700
+                        className="py-4 px-6 mt-20 m-2 font-josefin font-poppins text-xl text-white  font-medium rounded-lg bg-gradient-to-rounded-md bg-red-700
                        hover:bg-red-600	 hover:text-white"
                         onClick={handleAllCategory}
                     >

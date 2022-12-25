@@ -86,7 +86,7 @@ const Header = () => {
 
                                         <button
                                             onClick={handleLogout}
-                                            className="font-medium tracking-wide ml-10 bg-white hover:bg-black hover:text-white px-2  rounded py-2  text-black transition-colors duration-200 hover:text-white"
+                                            className="font-medium tracking-wide ml-10 bg-white hover:bg-black hover:text-white px-2  rounded py-2  text-black transition-colors duration-200 "
                                         >
                                             Log Out
                                         </button>
@@ -198,14 +198,17 @@ const Header = () => {
                                                                 My Reviews
 
                                                             </Link>
-                                                            <Link
-                                                                to="/dashboard"
-                                                                className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
-                                                            >
-                                                                Dashboard
+                                                            {
+                                                                isAdmin && <>
+                                                                    <Link
+                                                                        to="/dashboard"
+                                                                        className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
+                                                                    >
+                                                                        Dashboard
 
-                                                            </Link>
-
+                                                                    </Link>
+                                                                </>
+                                                            }
                                                             <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 sm:h2 rounded-full" alt="" /></span>
                                                             <button
                                                                 onClick={handleLogout}

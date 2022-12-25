@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 
 const AllUsers = () => {
-    const url = `http://localhost:5000/usersList`;
+    const url = `https://java-bakery-shop-server.vercel.app/usersList`;
     const [displayUser, setDisplayUser] = useState();
 
     const { data: users = [],refetch } = useQuery({
@@ -15,7 +15,7 @@ const AllUsers = () => {
         }
     })
     const handleMakeAdmin = _id =>{
-        fetch (`http://localhost:5000/usersList/admin/${_id}`,{
+        fetch (`https://java-bakery-shop-server.vercel.app/usersList/admin/${_id}`,{
             method:'PUT'
         })
         .then(res => res.json())
@@ -31,7 +31,7 @@ const AllUsers = () => {
     const handleDeleteUser = _id => {
 
 
-        fetch(`http://localhost:5000/usersList/${_id}`, {
+        fetch(`https://java-bakery-shop-server.vercel.app/usersList/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

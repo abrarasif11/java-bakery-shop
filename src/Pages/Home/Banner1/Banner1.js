@@ -9,7 +9,7 @@ const Banner1 = () => {
         className="absolute inset-0 object-cover w-full h-full"
         alt=""
       />
-      <div className="relative bg-gray-900 font-titillium bg-opacity-75">
+      <div className="relative bg-gray-900 font-josefin bg-opacity-75">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
@@ -24,7 +24,7 @@ const Banner1 = () => {
               <Link
                 to="/aboutUs"
                 aria-label=""
-                className="inline-flex items-center font-josefin font-semibold tracking-wider transition-colors duration-200 bg-red-700 px-2 py-2 text-teal-accent-400 hover:text-teal-accent-700"
+                className="inline-flex items-center font-josefin font-xl tracking-wider transition-colors duration-200 text-white rounded-lg bg-red-700 px-2 py-2 text-teal-accent-400 hover:text-teal-accent-700"
               >
                 Learn more
                 <svg

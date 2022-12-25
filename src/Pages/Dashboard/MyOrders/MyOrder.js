@@ -6,7 +6,7 @@ import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const MyOrder = () => {
     const { user } = useContext(AuthContext);
-    const url = `http://localhost:5000/items?email=${user?.email}`;
+    const url = `https://java-bakery-shop-server.vercel.app/items?email=${user?.email}`;
     const { data: items = [] } = useQuery({
         queryKey: ['items', user?.email],
         queryFn: async () => {

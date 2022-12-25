@@ -10,8 +10,8 @@ const AboutUs = () => {
                     <span className="block text-xl font-bold tracking-widest uppercase dark:text-violet-400">MD Fahim Abrar Asif</span>
                     <h2 className="text-xl font-semibold tracking-wide">Project Owner</h2>
                 </div>
-                <a target='_blank' className='mx-2 font-josefin' href="https://github.com/abrarasif11"><button className='bg-red-700 text-black rounded-lg px-2 py-2'>Github Link</button></a>
-                <a target='_blank' href="https://fahim-abrar-asif-portfolio.netlify.app/"><button className='bg-red-700 font-josefin text-black rounded-lg px-2 py-2'>Portfolio Link</button></a>
+                <a target='_blank' className='mx-2 font-josefin' href="https://github.com/abrarasif11"><button className='bg-red-700 font-semibold hover:text-white text-black rounded-lg px-2 py-2'>Github Link</button></a>
+                <a target='_blank' href="https://fahim-abrar-asif-portfolio.netlify.app/"><button className='bg-red-700 font-josefin hover:text-white font-semibold text-black rounded-lg px-2 py-2'>Portfolio Link</button></a>
             </div>
         </section>
     );

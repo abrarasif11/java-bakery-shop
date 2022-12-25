@@ -24,7 +24,7 @@ const AddItems = () => {
         };
 
         console.log(product);
-        fetch(`http://localhost:5000/allitems`, {
+        fetch(`https://java-bakery-shop-server.vercel.app/allitems`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",

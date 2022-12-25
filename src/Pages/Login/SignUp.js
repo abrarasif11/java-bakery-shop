@@ -25,7 +25,7 @@ const SignUp = () => {
             const saveUser = (name, email, dropdown) => {
                 const usersSaved = { name, email, dropdown };
                 console.log(usersSaved);
-                fetch("http://localhost:5000/usersList", {
+                fetch("https://java-bakery-shop-server.vercel.app/usersList", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

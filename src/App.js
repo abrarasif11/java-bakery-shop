@@ -37,7 +37,7 @@ function App() {
         {
           path: '/categories/:id',
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/categories/${params.id}`),
+            fetch(`https://java-bakery-shop-server.vercel.app/categories/${params.id}`),
           element: <PrivateRoute><SingleCategoryItem></SingleCategoryItem></PrivateRoute>
         },
         {
@@ -50,7 +50,7 @@ function App() {
         // },
         {
           path: '/myReviews',
-          loader :() => fetch('http://localhost:5000/review'),
+          loader :() => fetch('https://java-bakery-shop-server.vercel.app/review'),
           element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
         
         },

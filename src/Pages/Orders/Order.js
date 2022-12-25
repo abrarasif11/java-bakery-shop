@@ -6,7 +6,7 @@ const Order = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+        fetch(`https://java-bakery-shop-server.vercel.app/orders?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('javabakeryshop-token')}`
             }
@@ -23,7 +23,7 @@ const Order = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure? You want to cancel this item')
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://java-bakery-shop-server.vercel.app/orders/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('javabakeryshop-token')}`
@@ -42,7 +42,7 @@ const Order = () => {
         }
     }
     const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://java-bakery-shop-server.vercel.app/orders/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

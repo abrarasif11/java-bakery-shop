@@ -5,7 +5,7 @@
 //     const { _id, serviceName, customer, phone, price, status, picture } = order;
 //     const [orderService, setOrderService] = useState({})
 //     useEffect(() => {
-//         fetch(`http://localhost:5000/allcategories/${allcategories}`)
+//         fetch(`https://java-bakery-shop-server.vercel.app/allcategories/${allcategories}`)
 //             .then(res => res.json())
 //             .then(data => setOrderService(data))
 //     }, [allcategories])

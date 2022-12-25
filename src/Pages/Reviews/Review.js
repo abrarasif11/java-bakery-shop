@@ -14,7 +14,7 @@ const Review = () => {
         console.log(formValue);
 
         if (user?.uid) {
-            fetch("http://localhost:5000/review", {
+            fetch("https://java-bakery-shop-server.vercel.app/review", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",
