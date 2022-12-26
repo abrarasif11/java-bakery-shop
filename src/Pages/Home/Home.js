@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import Category from '../Category/Category';
 import Banner2 from './Banner/Banner2';
 import Banner3 from './Banner/Banner3';
 import Banner1 from './Banner1/Banner1';
 
 const Home = () => {
+    useTitle('Home')
   const navigate = useNavigate();
   const handleAllCategory = () => {
       navigate("/allItems");

@@ -38,7 +38,7 @@ const Header = () => {
                                 to="/reviews"
                                 class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                             >
-                                Reviews
+                                Review
                             </Link>
                         </li>
                     </ul>
@@ -168,7 +168,7 @@ const Header = () => {
                                                     to="/reviews"
                                                     class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-white"
                                                 >
-                                                    Reviews
+                                                    Review
                                                 </Link>
                                             </li>
                                             {/* <li>

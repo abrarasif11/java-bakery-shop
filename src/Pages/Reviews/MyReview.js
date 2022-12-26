@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import MyReviews from './MyReviews';
 
 const MyReview = () => {
+    useTitle('My Reviews')
     const reviews = useLoaderData()
     return (
         <div>

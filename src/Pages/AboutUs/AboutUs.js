@@ -1,6 +1,8 @@
 import React from 'react';
 import ceo from '../../assests/IMG-4772 (1).JPG'
+import useTitle from '../../hooks/useTitle';
 const AboutUs = () => {
+    useTitle('About Us')
     return (
         <section className='font-josefin'>
             <h3 className='text-3xl font-josefin font-bold mt-10 mb-10'>About <span className='text-red-700'> Java Bakery Shop</span></h3>

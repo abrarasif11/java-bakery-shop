@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import useTitle from '../../hooks/useTitle';
 const SignUp = () => {
+    useTitle('Sign Up')
     const { user, createUser } = useContext(AuthContext);
     const handleSignUp = (event) => {
         event.preventDefault();

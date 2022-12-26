@@ -3,8 +3,10 @@ import { Link, Outlet } from 'react-router-dom';
 import useAdmin from '../../hooks/useAdmin';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import Header from '../Header/Header';
+import useTitle from '../../hooks/useTitle';
 
 const DashboardLayout = () => {
+    useTitle('Dashboard')
     const { user } = useContext(AuthContext)
     const [isAdmin] = useAdmin(user?.email)
     return (

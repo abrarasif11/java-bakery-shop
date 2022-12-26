@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import useTitle from '../../hooks/useTitle';
 const Review = () => {
+    useTitle('Review')
     const { user, } = useContext(AuthContext);
     const handleReviewSubmit = event => {
         event.preventDefault();

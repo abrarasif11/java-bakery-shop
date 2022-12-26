@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hooks/useTitle';
 import AllItems from './AllItems';
 import AllItemsCategories from './AllItemsCategories';
 
 const AllItem = () => {
+    useTitle('All Items')
     const [allitems, setAllItems] = useState([]);
     const [categories, setCategories] = useState(null)
     useEffect(() => {

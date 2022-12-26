@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import CategoryModal from '../Category/CategoryModal';
 import SingleCategoryItems from './SingleCategoryItems';
 
 const SingleCategoryItem = () => {
+    useTitle('Items')
     const singleItems = useLoaderData();
     console.log(singleItems);
     const [singleCategories, setSingleCategories] = useState(null)
