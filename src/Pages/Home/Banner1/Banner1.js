@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Banner1 = () => {
-    return (
-        <div className="relative">
+  return (
+    <div className="relative">
       <img
         src="https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         className="absolute inset-0 object-cover w-full h-full"
@@ -14,12 +14,12 @@ const Banner1 = () => {
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-6xl sm:leading-none">
-              Welcome To <br className="hidden md:block" />
+                Welcome To <br className="hidden md:block" />
                 {' '}
                 <span className="text-yellow-400">Java Bakery Shop</span>
               </h2>
               <p className="max-w-xl mb-4 text-base text-white md:text-xl">
-              You work hard you need something make you more efficient. Try out our coffees check the menu and get yourself boosted up again ❤
+                You work hard you need something make you more efficient. Try out our coffees check the menu and get yourself boosted up again ❤
               </p>
               <Link
                 to="/aboutUs"
@@ -36,12 +36,12 @@ const Banner1 = () => {
                 </svg>
               </Link>
             </div>
-           
+
           </div>
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Banner1;

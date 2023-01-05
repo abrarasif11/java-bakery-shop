@@ -10,8 +10,6 @@ const Review = () => {
         const form = event.target;
         const reviews = form.reviews.value;
         const name = form.name.value;
-
-
         const formValue = { reviews, name };
         console.log(formValue);
 
