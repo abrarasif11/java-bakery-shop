@@ -6,71 +6,58 @@ import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import useTitle from '../../hooks/useTitle';
 const Login = () => {
     useTitle('Login')
-    const [error, setError] = useState('');
-    const { signIn, googleSignIn } = useContext(AuthContext);
-    const navigate = useNavigate();
-    const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    // const navigate = useNavigate();
+   
+    const { user, signIn, googleSignIn } = useContext(AuthContext);
     const provider = new GoogleAuthProvider();
-    const handleSubmit = event => {
-        event.preventDefault();
-        const form = event.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        signIn(email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                form.reset();
-                setError('');
-                if (user.emailVerified) {
-                    navigate(from, { replace: true });
-                }
-                else {
-                    toast.error('Your email is not valid, Please verify email first')
-                }
-            })
-            .catch(error => {
-                console.error(error)
-                setError(error.message);
-            });
-    }
-    const handleGoogleSignIn = () => {
-        googleSignIn(provider)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const email = form.email.value;
+      const password = form.password.value;
+    //   navigate('/allcategories')
+      console.log({ email, password });
+  
+      signIn(email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+          form.reset();
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     };
+    const handleGoogleSignIn = () => {
+		googleSignIn(provider)
+			.then((userCredential) => {
+				const user = userCredential.user;
+				console.log(user);
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	};
     return (
         <div className="w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 bg-black rounded-lg shadow-md ">
             <h1 className="text-3xl font-semibold text-center text-white">Log in</h1>
-
             <form onSubmit={handleSubmit} className="mt-6">
                 <div>
                     <label htmlFor="email" className="flex items-center justify-between text-sm text-white">Email</label>
                     <input id='email' name='email' type="email" className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required />
                 </div>
-
                 <div className="mt-4">
                     <div className="flex items-center justify-between">
                         <label htmlFor="password" className="block text-sm text-white dark:text-gray-200" required >Password</label>
-
                     </div>
-
                     <input id='password' name='password' type="password" className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
-
                 <div className="mt-6">
                     <button className=" w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-700 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
                         Log in
                     </button>
                 </div>
             </form>
-
             <div className="flex items-center justify-between mt-4">
                 <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
 
@@ -89,9 +76,8 @@ const Login = () => {
                 </button>
             </div>
             <p className="mt-8 text-xs font-light text-center text-white"> Don't have an account? <Link to="/signup" className="font-medium text-white dark:text-gray-200 hover:underline">Sign Up</Link></p>
-            <p className='text-red-700 mt-7 mb-7'> {error}</p>
+            {/* <p className='text-red-700 mt-7 mb-7'> {error}</p> */}
         </div>
-        
     );
 };
 
