@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import useTitle from '../../hooks/useTitle';
 const SignUp = () => {
+  const [error, setError] = useState('');
   useTitle('Sign Up')
   const navigate = useNavigate();
     navigate("/login");
@@ -26,8 +27,12 @@ const SignUp = () => {
                 navigate('/login')
                 form.reset();
             })
-            .catch((error) => {
-                console.error(error);
+            // .catch((error) => {
+            //     console.error(error);
+            // });
+            .catch(error => {
+              console.error(error)
+              setError(error.message)
             });
     };
     const saveUser = (name, email, dropdown) => {
@@ -76,7 +81,7 @@ const SignUp = () => {
           </button>
         </div>
       </form>
-      {/* <p className='text-red-700'>{error}</p> */}
+      <p className='text-red-700'>{error}</p>
       <p class="mt-8 text-xs font-light text-center text-white"> Already have an account? <Link to="/login" class="font-medium text-white dark:text-gray-200 hover:underline">Log In</Link></p>
     </div>
   );

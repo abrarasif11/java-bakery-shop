@@ -6,38 +6,38 @@ import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import useTitle from '../../hooks/useTitle';
 const Login = () => {
     useTitle('Login')
-    // const navigate = useNavigate();
-   
+    const navigate = useNavigate();
+    navigate("/");
     const { user, signIn, googleSignIn } = useContext(AuthContext);
     const provider = new GoogleAuthProvider();
     const handleSubmit = (event) => {
-      event.preventDefault();
-      const form = event.target;
-      const email = form.email.value;
-      const password = form.password.value;
-    //   navigate('/allcategories')
-      console.log({ email, password });
-  
-      signIn(email, password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          console.log(user);
-          form.reset();
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        // navigate('/')
+        console.log({ email, password });
+
+        signIn(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+                form.reset();
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     };
     const handleGoogleSignIn = () => {
-		googleSignIn(provider)
-			.then((userCredential) => {
-				const user = userCredential.user;
-				console.log(user);
-			})
-			.catch((error) => {
-				console.error(error);
-			});
-	};
+        googleSignIn(provider)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
     return (
         <div className="w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 bg-black rounded-lg shadow-md ">
             <h1 className="text-3xl font-semibold text-center text-white">Log in</h1>
