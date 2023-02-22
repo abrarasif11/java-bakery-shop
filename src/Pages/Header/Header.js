@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import headerPhoto from '../../assests/clipart2362429.png'
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import useAdmin from '../../hooks/useAdmin';
+import { MdDarkMode } from 'react-icons/md';
+import { BsFillSunFill } from 'react-icons/bs';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut, dark, setDark } = useContext(AuthContext);
     const [isAdmin] = useAdmin(user?.email)
     const handleLogout = () => {
         logOut()
@@ -13,7 +15,7 @@ const Header = () => {
             .catch(err => console.log(err));
     }
     return (
-        <div class="bg-red-700 font-josefin">
+        <div class="bg-[#DC0000] h-[120px] font-josefin">
             <div class="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div class="relative flex items-center justify-between lg:justify-center lg:space-x-16">
                     <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -102,6 +104,13 @@ const Header = () => {
                                     </Link>
                             }
                         </li>
+                        <React.Fragment>
+                            <button className={` ${dark ? 'text-black' : 'text-black'} hover:text-white ml-[50px]`} onClick={() => setDark(!dark)}>
+                                {
+                                    dark ? <MdDarkMode className="text-2xl"></MdDarkMode> : <BsFillSunFill className="text-2xl"></BsFillSunFill>
+                                }
+                            </button>
+                        </React.Fragment>
                     </ul>
                     <div class="lg:hidden">
                         <button
@@ -190,7 +199,7 @@ const Header = () => {
                                             <li>
                                                 {
                                                     user?.uid ?
-                                                        <div className='flex justify-center items-center'>
+                                                        <div className='flex items-center justify-between'>
                                                             <Link
                                                                 to="/myReviews"
                                                                 className="font-medium mr-6 tracking-wide text-black transition-colors duration-200 hover:text-white"
@@ -209,6 +218,13 @@ const Header = () => {
                                                                     </Link>
                                                                 </>
                                                             }
+                                                            <React.Fragment>
+                                                                <button className='text-black hover:text-white ml-10  mb-3' onClick={() => setDark(!dark)}>
+                                                                    {
+                                                                        dark ? <MdDarkMode className=" text-2xl"></MdDarkMode> : <BsFillSunFill className="text-2xl"></BsFillSunFill>
+                                                                    }
+                                                                </button>
+                                                            </React.Fragment>
                                                             <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 sm:h2 rounded-full" alt="" /></span>
                                                             <button
                                                                 onClick={handleLogout}
@@ -228,6 +244,7 @@ const Header = () => {
                                                         </Link>
                                                 }
                                             </li>
+
                                         </ul>
                                     </nav>
                                 </div>

@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import useTitle from '../../hooks/useTitle';
 const Login = () => {
+    const { dark } = useContext(AuthContext);
     useTitle('Login')
     const navigate = useNavigate();
     navigate("/");
@@ -39,7 +40,7 @@ const Login = () => {
             });
     };
     return (
-        <div className="w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 bg-black rounded-lg shadow-md ">
+        <div className={`w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 ${dark ? 'bg-gray-800': 'bg-black'} rounded-lg shadow-md `}>
             <h1 className="text-3xl font-semibold text-center text-white">Log in</h1>
             <form onSubmit={handleSubmit} className="mt-6">
                 <div>
@@ -53,7 +54,7 @@ const Login = () => {
                     <input id='password' name='password' type="password" className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
                 </div>
                 <div className="mt-6">
-                    <button className=" w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-700 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+                    <button className=" w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#DC0000] rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
                         Log in
                     </button>
                 </div>

@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import useTitle from '../../hooks/useTitle';
 const SignUp = () => {
+  const { dark } = useContext(AuthContext);
   const [error, setError] = useState('');
   useTitle('Sign Up')
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const SignUp = () => {
 
   }
   return (
-    <div class="w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 bg-black rounded-lg shadow-md ">
+    <div class={`w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 ${dark ? 'bg-gray-800': 'bg-black'} rounded-lg shadow-md `}>
       <h1 class="text-3xl font-semibold text-center text-white dark:text-white">Sign In</h1>
 
       <form onSubmit={handleSubmit} class="mt-6">

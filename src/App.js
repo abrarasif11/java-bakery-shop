@@ -18,9 +18,12 @@ import MyOrder from './Pages/Dashboard/MyOrders/MyOrder';
 import AllUsers from './Pages/Dashboard/AllUsers/AllUsers';
 import AddItems from './Pages/AddItems/AddItems';
 import AdminRoute from './Route/PrivateRoute/AdminRoute/AdminRoute';
+import { AuthContext } from './Context/AuthProvider/AuthProvider';
+import { useContext } from 'react';
 
 
 function App() {
+  const { dark } = useContext(AuthContext);
   const router = createBrowserRouter([
     {
       path: '/',
@@ -92,7 +95,7 @@ function App() {
     }
   ])
   return (
-    <div className="App">
+    <div className={`App ${dark ? 'bg-black': 'bg-white'}`}>
       <RouterProvider fallbackElement={<Spinner></Spinner>} router={router}></RouterProvider>
       <Toaster></Toaster>
     </div>

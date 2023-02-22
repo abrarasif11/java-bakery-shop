@@ -12,7 +12,7 @@ const AllItems = ({ allitem, setCategories }) => {
                 </div>
                 <label 
                  htmlFor="order-modal" type="button"
-                 className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-red-700 text-black"
+                 className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#DC0000] text-black"
                  onClick={() => setCategories(allitem)}
                  >Order Now</label>
             </div>

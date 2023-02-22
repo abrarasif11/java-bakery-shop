@@ -50,7 +50,7 @@ const CategoryModal = ({ singleCategories }) => {
                         <input name='number' type="text" placeholder="Contact Number" className="input w-full input-bordered" />
                         <input name='meeting' type="text" placeholder="Order Location" className="input w-full input-bordered" />
                         <br />
-                        <input className='bg-red-700 px-2 py-2 rounded font-semibold text-black w-full ' type="Submit" value="Submit" />
+                        <input className='bg-[#DC0000] px-2 py-2 rounded font-semibold text-black w-full ' type="Submit" value="Submit" />
                     </form>
                 </div>
             </div>

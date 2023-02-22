@@ -12,7 +12,7 @@ const SingleCategoryItems = ({ singleItem, setSingleCategories }) => {
                 </div>
                 <label 
                  htmlFor="order-modal" type="button"
-                 className="flex items-center rounded-full justify-center w-full p-3 font-semibold tracking-wide  bg-red-700 text-black"
+                 className="flex items-center rounded-full justify-center w-full p-3 font-semibold tracking-wide  bg-[#DC0000] text-black"
                  onClick={() => setSingleCategories(singleItem)}
                  >Order Now</label>
             </div>

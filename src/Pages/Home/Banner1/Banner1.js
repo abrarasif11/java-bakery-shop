@@ -24,7 +24,7 @@ const Banner1 = () => {
               <Link
                 to="/aboutUs"
                 aria-label=""
-                className="inline-flex items-center font-josefin font-xl tracking-wider transition-colors duration-200 text-white rounded-lg bg-red-700 px-2 py-2 text-teal-accent-400 hover:text-teal-accent-700"
+                className="inline-flex items-center font-josefin font-xl tracking-wider transition-colors duration-200 text-white rounded-lg bg-[#DC0000] px-2 py-2 text-teal-accent-400 hover:text-teal-accent-700"
               >
                 Learn more
                 <svg
