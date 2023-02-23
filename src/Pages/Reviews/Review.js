@@ -26,6 +26,7 @@ const Review = () => {
                     console.log(data);
                     if (data.acknowledged) {
                         toast.success("Thanks for your review!!!");
+                        form.reset();
                     }
                 })
                 .catch((err) => console.log(err));
