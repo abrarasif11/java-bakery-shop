@@ -16,13 +16,7 @@ const Header = () => {
     };
     const menuItems = (
         <React.Fragment>
-            <React.Fragment>
-                <button className={` ${dark ? 'text-black' : 'text-black'} hover:text-white ml-[50px] mr-3`} onClick={() => setDark(!dark)}>
-                    {
-                        dark ? <MdDarkMode className="text-2xl"></MdDarkMode> : <BsFillSunFill className="text-2xl"></BsFillSunFill>
-                    }
-                </button>
-            </React.Fragment>
+           
            
             <li>
                 <Link
@@ -72,7 +66,15 @@ const Header = () => {
                 >
                     <Link to="/login">Login</Link>
                 </li>
+                
             )}
+             <React.Fragment>
+                <button className={` ${dark ? 'text-black' : 'text-black'} hover:text-white ml-[15px] sm:mb-2 mr-3`} onClick={() => setDark(!dark)}>
+                    {
+                        dark ? <MdDarkMode className="text-2xl"></MdDarkMode> : <BsFillSunFill className="text-2xl"></BsFillSunFill>
+                    }
+                </button>
+            </React.Fragment>
             {user?.uid && (
                 <div
                     className="tooltip ml-4 mb-1 lg:tooltip-left md:tooltip-right mt-1 dropdown dropdown-bottom dropdown-end"

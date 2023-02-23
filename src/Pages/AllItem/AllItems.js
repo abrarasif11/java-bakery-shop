@@ -7,8 +7,8 @@ const AllItems = ({ allitem, setCategories }) => {
             <img src={picture} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">
-                    <h2 className="text-2xl font-semibold tracking-wide">{name}</h2>
-                    <h2 className="text-xl font-semibold tracking-wide">Price : {price}</h2>
+                    <h2 className="text-2xl text-black font-semibold tracking-wide">{name}</h2>
+                    <h2 className="text-xl text-black font-semibold tracking-wide">Price : {price}</h2>
                 </div>
                 <label 
                  htmlFor="order-modal" type="button"
