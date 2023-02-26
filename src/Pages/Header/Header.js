@@ -126,7 +126,7 @@ const Header = () => {
                         to="/"
                         className="btn btn-ghost  font-josefin font-semibold normal-case text-2xl"
                     >
-                        <img className='w-[55px] ' src={headerPhoto} alt="" />
+                        <img className='w-[55px]' src={headerPhoto} alt="" />
                     </Link>
                 </div>
             </div>
