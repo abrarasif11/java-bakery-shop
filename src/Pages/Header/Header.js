@@ -5,6 +5,7 @@ import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import useAdmin from '../../hooks/useAdmin';
 import { MdDarkMode } from 'react-icons/md';
 import { BsFillSunFill } from 'react-icons/bs';
+import { FaUserCircle } from 'react-icons/fa';
 const Header = () => {
     const { user, logOut, dark, setDark } = useContext(AuthContext);
     const [isAdmin] = useAdmin(user?.email)
@@ -81,11 +82,18 @@ const Header = () => {
                     data-tip={user?.displayName}
                 >
                     <label tabIndex={0}>
-                        <img
-                            className="w-[36px] h-[36px] rounded-full mr-5"
-                            src={user?.photoURL}
-                            alt=""
-                        />
+                        {
+                            
+                            user?.photoURL ?
+                                <img
+                                    className="w-[36px] h-[36px] rounded-full mr-5"
+                                    src={user?.photoURL}
+                                    alt=""
+                                />
+                                :
+                                <FaUserCircle className={`${dark ? 'text-black' : 'text-black'} w-[30px] mt-1 mr-2 h-[40px]`}></FaUserCircle>
+                        }
+                        
                     </label>
 
                 </div>
