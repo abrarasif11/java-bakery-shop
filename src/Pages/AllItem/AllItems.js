@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AllItems = ({ allitem, setCategories }) => {
+    const [show, setShow] = useState(false);
     const { picture, name, price } = allitem
     return (
         <div className=" rounded-md shadow-md font-josefin bg-slate-200 hover:scale-105 transition-all dark:text-gray-100">

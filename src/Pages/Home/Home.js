@@ -3,25 +3,27 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import Category from '../Category/Category';
+import DummyModal from '../DummyModal';
 import Banner2 from './Banner/Banner2';
 import Banner3 from './Banner/Banner3';
 import Banner1 from './Banner1/Banner1';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 const Home = () => {
     const { dark } = useContext(AuthContext);
     useTitle('Home')
-  const navigate = useNavigate();
-  const handleAllCategory = () => {
-      navigate("/allItems");
-  };
+    const navigate = useNavigate();
+    const handleAllCategory = () => {
+        navigate("/allItems");
+    };
     return (
         <div>
-          <Banner1></Banner1>
-          <Banner2></Banner2>
-          <p className={`text-center font-josefin ${dark ? 'text-[#DC0000]': 'text-black'} text-4xl font font-bold mt-20`}>Categories</p>
-          <Category></Category>
-          <div>
-          <Link className='flex items-center justify-center
+            <Banner1></Banner1>
+            <Banner2></Banner2>
+            <p className={`text-center font-josefin ${dark ? 'text-[#DC0000]' : 'text-black'} text-4xl font font-bold mt-20`}>Categories</p>
+            <Category></Category>
+            <div>
+                <Link className='flex items-center justify-center
                        ' to='/allItems'>
                     <button
                         className="py-4 px-6 mt-20 m-2 font-josefin font-poppins text-xl text-white  font-medium rounded-lg bg-gradient-to-rounded-md bg-[#DC0000]
@@ -31,8 +33,14 @@ const Home = () => {
                         See All Items
                     </button>
                 </Link>
-          </div>
-          <Banner3></Banner3>
+            </div>
+            <Banner3></Banner3>
+            {/* <DummyModal></DummyModal> */}
+            <MessengerCustomerChat
+                pageId="334107407044566"
+                appId="513367597657603"
+                // htmlRef="<REF_STRING>"
+            />,
         </div>
     );
 };
