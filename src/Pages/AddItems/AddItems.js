@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const AddItems = () => {
-    const imagebbkey = process.env.REACT_APP_imagebb_key
+    const imagebb_key = process.env.REACT_APP_imagebb_key
     const [img, setImg] = useState(null)
     const { user } = useContext(AuthContext)
     const handlePostSubmit = event => {
@@ -15,7 +15,7 @@ const AddItems = () => {
         // imgbb
         const formData = new FormData();
         formData.append('image', img);
-        const url = `https://api.imgbb.com/1/upload?key=${imagebbkey}`
+        const url = `https://api.imgbb.com/1/upload?key=${imagebb_key}`
         fetch(url, {
             method: 'POST',
             body: formData
@@ -31,7 +31,7 @@ const AddItems = () => {
                         picture: picture,
                     };
                     console.log(uploadPhoto);
-                    fetch('https://socio-buzz-server.vercel.app/post', {
+                    fetch('https://java-bakery-shop-server.vercel.app/allcategories', {
                         method: 'POST',
                         headers: {
                             "content-type": "application/json",
@@ -45,10 +45,10 @@ const AddItems = () => {
                         })
                 }
             })
-    };
+    }
     return (
         <div>
-                 <form className='' onSubmit={handlePostSubmit}>
+            <form className='' onSubmit={handlePostSubmit}>
                 <label className="label">
                     <span className="label-text font-poppins mx-auto text-lg text-black">User Name</span>
                 </label>

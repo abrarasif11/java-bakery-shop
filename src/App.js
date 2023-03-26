@@ -20,6 +20,7 @@ import AddItems from './Pages/AddItems/AddItems';
 import AdminRoute from './Route/PrivateRoute/AdminRoute/AdminRoute';
 import { AuthContext } from './Context/AuthProvider/AuthProvider';
 import { useContext } from 'react';
+import Order from './Pages/Orders/Order';
 
 
 function App() {
@@ -47,10 +48,10 @@ function App() {
           path: '/reviews',
           element: <PrivateRoute><Review></Review></PrivateRoute>
         },
-        // {
-        //   path: '/orders',
-        //   element: <Order></Order>
-        // },
+        {
+          path: '/orders',
+          element: <Order></Order>
+        },
         {
           path: '/myReviews',
           loader :() => fetch('https://java-bakery-shop-server.vercel.app/review'),

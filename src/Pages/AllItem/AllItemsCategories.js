@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
-const AllItemsCategories = ({categories}) => {
+const AllItemsCategories = ({categories,setCategories}) => {
         const { name, price } = categories;
         console.log(categories);
         const { user } = useContext(AuthContext);
@@ -28,6 +28,7 @@ const AllItemsCategories = ({categories}) => {
                     .then((data) => {
                         console.log(data);
                         if (data.acknowledged) {
+                            setCategories(null)
                             toast.success("Order Confirm Successfully");
                         }
                     })

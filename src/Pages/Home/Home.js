@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import Category from '../Category/Category';
-import DummyModal from '../DummyModal';
 import Banner2 from './Banner/Banner2';
 import Banner3 from './Banner/Banner3';
 import Banner1 from './Banner1/Banner1';
@@ -32,13 +31,12 @@ const Home = () => {
                     >
                         See All Items
                     </button>
-                </Link>
+                </Link>      
             </div>
             <Banner3></Banner3>
-            {/* <DummyModal></DummyModal> */}
-            <MessengerCustomerChat
-                pageId="334107407044566"
-                appId="513367597657603"
+            <MessengerCustomerChat className="bg-[#DC0000]"
+                pageId=""
+                appId=""
                 // htmlRef="<REF_STRING>"
             />,
         </div>

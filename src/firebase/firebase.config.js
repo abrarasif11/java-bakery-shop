@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCk8VFgutzTLJNnhx38KHgolM3wQPT6MOQ",
-  authDomain: "java-bakery-shop.firebaseapp.com",
-  projectId: "java-bakery-shop",
-  storageBucket: "java-bakery-shop.appspot.com",
-  messagingSenderId: "87447526037",
-  appId: "1:87447526037:web:4df0d680ca1d143ccd199c"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

@@ -32,6 +32,7 @@ const AllItem = () => {
                         categories &&
                         <AllItemsCategories
                         categories={categories}
+                        setCategories={setCategories}
                         ></AllItemsCategories>
                     }
                 </div>

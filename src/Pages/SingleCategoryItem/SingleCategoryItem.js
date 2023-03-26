@@ -24,6 +24,7 @@ const SingleCategoryItem = () => {
                         singleCategories &&
                         <CategoryModal
                             singleCategories={singleCategories}
+                            setSingleCategories={setSingleCategories}
                         >
                         </CategoryModal>
                     }
