@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleCategoryItems = ({ singleItem, setSingleCategories }) => {
-    const { picture, name, price } = singleItem
+    const { picture, name, price } = singleItem;
     return (
         <div className="max-w-xs rounded-md shadow-md font-josefin bg-slate-200 hover:scale-105 transition-all dark:text-gray-100">
             <img src={picture} alt="" className="object-cover object-center w-full  rounded-t-md h-72 dark:bg-gray-500" />

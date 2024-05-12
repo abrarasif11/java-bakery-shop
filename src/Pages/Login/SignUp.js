@@ -8,54 +8,54 @@ const SignUp = () => {
   const [error, setError] = useState('');
   useTitle('Sign Up')
   const navigate = useNavigate();
-    navigate("/login");
-    const { user, createUser } = useContext(AuthContext);
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const email = form.email.value;
-        const username = form.username.value;
-        const password = form.password.value;
+  navigate("/login");
+  const { user, createUser } = useContext(AuthContext);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const username = form.username.value;
+    const password = form.password.value;
 
-        console.log({ email, password, username});
+    console.log({ email, password, username });
 
-        createUser(email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user);
-                toast.success("User Created Successfully")
-                saveUser(username, email);
-                navigate('/login')
-                form.reset();
-            })
-            // .catch((error) => {
-            //     console.error(error);
-            // });
-            .catch(error => {
-              console.error(error)
-              setError(error.message)
-            });
-    };
-    const saveUser = (name, email, dropdown) => {
-      const usersSaved = { name, email, dropdown };
-      console.log(usersSaved);
-      fetch("https://java-bakery-shop-server.vercel.app/usersList", {
-          method: "POST",
-          headers: {
-              "content-type": "application/json",
-          },
-          body: JSON.stringify(usersSaved),
+    createUser(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        toast.success("User Created Successfully")
+        saveUser(username, email);
+        navigate('/login')
+        form.reset();
       })
-          .then((res) => res.json())
-          .then((data) => {
-              console.log(data);
+      // .catch((error) => {
+      //     console.error(error);
+      // });
+      .catch(error => {
+        console.error(error)
+        setError(error.message)
+      });
+  };
+  const saveUser = (name, email, dropdown) => {
+    const usersSaved = { name, email, dropdown };
+    console.log(usersSaved);
+    fetch("https://java-bakery-shop-server.vercel.app/usersList", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(usersSaved),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
 
-          })
-          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
 
   }
   return (
-    <div class={`w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 ${dark ? 'bg-gray-800': 'bg-black'} rounded-lg shadow-md `}>
+    <div class={`w-full font-josefin max-w-sm p-6 m-auto mx-auto mt-20 ${dark ? 'bg-gray-800' : 'bg-black'} rounded-lg shadow-md `}>
       <h1 class="text-3xl font-semibold text-center text-white dark:text-white">Sign In</h1>
 
       <form onSubmit={handleSubmit} class="mt-6">

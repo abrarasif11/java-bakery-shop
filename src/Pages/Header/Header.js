@@ -44,7 +44,7 @@ const Header = () => {
                     </Link>
                 </li>
             )}
-            {user?.uid && (
+            {/* {user?.uid && (
                 <li class="font-medium font-josefin tracking-wide text-black transition-colors duration-200 hover:text-white"
                 >
                     <Link
@@ -52,7 +52,7 @@ const Header = () => {
                         My Orders
                     </Link>
                 </li>
-            )}
+            )} */}
             {isAdmin && (
                 <li class="font-medium font-josefin tracking-wide text-black transition-colors duration-200 hover:text-white"
                 >

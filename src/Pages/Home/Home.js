@@ -35,8 +35,8 @@ const Home = () => {
             </div>
             <Banner3></Banner3>
             <MessengerCustomerChat className="bg-[#DC0000]"
-                pageId=""
-                appId=""
+                pageId="334107407044566"
+                appId="142760142066669"
                 // htmlRef="<REF_STRING>"
             />,
         </div>

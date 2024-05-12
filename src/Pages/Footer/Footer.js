@@ -196,7 +196,7 @@ const Footer = () => {
         </div>
         <div className=" pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
           <p className="text-sm text-center text-gray-100">
-            © Copyright 2023 Java Bakery Shop. All rights reserved.
+            © Copyright 2024 Java Bakery Shop. All rights reserved.
           </p>
         </div>
       </div>
